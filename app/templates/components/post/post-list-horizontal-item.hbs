@@ -1,9 +1,11 @@
 {{#link-to "news.item" item.id}}
 
-  <div class="post-list-horizontal-item">
-    <div class="image mb-3" style="{{item.imageStyle}}"></div>
-    <h3 class="title">{{item.title}}</h3>
-    <div class="summary">{{item.summary}}</div>
+  <div class="post-list-horizontal-item mb-3">
+    <div class="image" style="{{item.imageStyle}}"></div>
+    <div class="info">
+      <h3 class="title">{{item.title}}</h3>
+      <div class="summary">{{item.summary}}</div>
+    </div>
   </div>
 
 {{/link-to}}

@@ -17,13 +17,31 @@
       background-size: cover;
     }
 
-    .title {
+    .info {
       padding: 10px;
+      font-size: 25px;
+      line-height: 1.1em;
+      min-height: calc(7em + 30px);
+    }
+
+    .title {
+      font-size: 25px !important;
+      max-height: 3.3em !important;
+      line-height: 1.1em !important;
+      overflow: hidden;
+      margin-bottom: 10px;
     }
 
     .summary {
-      padding: 10px;
+      font-size: 15px !important;
+      max-height: 4.8em !important;
+      line-height: 1.2em !important;
+      overflow: hidden;
     }
+  }
+
+  .post-list-horizontal-item:hover {
+    background-color: #fafafa;
   }
 
 }
