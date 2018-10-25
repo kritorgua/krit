@@ -1,6 +1,8 @@
 <header class="row mb-5">
   <div class="col-sm-2">
-    <img src="/images/logo.svg" class="img-fluid">
+    {{#link-to "index"}}
+      <img src="/images/logo.svg" class="img-fluid">
+    {{/link-to}}
   </div>
   <div class="col-sm-10">
     <table style="height: 100%;">
@@ -9,11 +11,15 @@
         <td class="align-middle">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Новини</a>
+              {{#link-to "news.index" class="nav-link"}}
+                Новини
+              {{/link-to}}
             </li>
 
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Події</a>
+              {{#link-to "events.index" class="nav-link"}}
+                Події
+              {{/link-to}}
             </li>
 
             <li class="nav-item">
@@ -22,6 +28,14 @@
 
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Компанії</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Навчання</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Коворкінги</a>
             </li>
           </ul>
         </td>

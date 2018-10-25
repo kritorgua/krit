@@ -1,0 +1,29 @@
+.post-list-horizontal {
+
+  a {
+    color: #000;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .post-list-horizontal-item {
+    border: 1px solid #eee;
+
+    .image {
+      height: 200px;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .title {
+      padding: 10px;
+    }
+
+    .summary {
+      padding: 10px;
+    }
+  }
+
+}
