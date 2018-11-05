@@ -1,0 +1,21 @@
+.container-footer {
+  background-color: #5f9ffe;
+  min-height: 100px;
+  padding-top: 40px;
+}
+
+footer {
+  color: #000;
+
+  small {
+    color: #fff !important;
+
+    a {
+      color: #fff !important;
+    }
+
+    a:hover {
+      color: #fff !important;
+    }
+  }
+}

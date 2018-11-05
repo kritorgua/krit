@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'krit',
     environment,
@@ -20,8 +20,39 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    api: {
+      host: 'https://www.livarava.com',
+      path: '/api/v2',
+      key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+    },
+
+    i18n: {
+      defaultLocale: 'uk',
+      allowedLocales: ['uk']
+    },
+
+    neuronet: {
+      site: 136674,
+    },
+
+    pageTitle: {
+      replace: true
+    },
+
+    moment: {
+      includeLocales: true
+    },
   };
+
+  if (environment === 'local') {
+    ENV.api = {
+      host: 'http://local.livarava.com',
+      path: '/api/v2',
+      key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+    };
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
