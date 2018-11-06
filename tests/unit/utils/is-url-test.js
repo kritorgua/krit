@@ -1,7 +1,7 @@
 import isUrl from 'krit/utils/is-url';
 import { module, test } from 'qunit';
 
-module('Unit | Utility | is-url', function(hooks) {
+module('Unit | Utility | is-url', function () {
 
   // Replace this with your real tests.
   test('it works', function(assert) {
