@@ -1,6 +1,4 @@
 import DS from 'ember-data';
-import {computed, get} from '@ember/object';
-import {htmlSafe} from '@ember/string';
 
 export default DS.Model.extend({
   title: DS.attr('string'),
@@ -14,11 +12,6 @@ export default DS.Model.extend({
   // Image
   image: DS.belongsTo('neuron'),
   image_url: DS.attr('string'),
-  imageStyle: computed('image_url', function () {
-    let url = get(this, 'image_url');
-    if (!url) return;
-    return htmlSafe(`background-image: url(${url});`);
-  }),
 
   // Relationships
   author: DS.belongsTo('user'),
