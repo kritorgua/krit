@@ -1,7 +1,6 @@
 .container-footer {
   background-color: #5f9ffe;
   min-height: 100px;
-  padding-top: 40px;
 }
 
 footer {
@@ -16,6 +15,12 @@ footer {
 
     a:hover {
       color: #fff !important;
+    }
+
+    ul {
+      li {
+        list-style: none;
+      }
     }
   }
 }

@@ -1,16 +1,54 @@
-<footer class="row">
-  <div class="col-sm-6">
-    <small>
-      &copy; 2018 Kryvyy Rih IT Cluster
-    </small>
-  </div>
-  <div class="col-sm-6 text-right">
-    <small>
-      Powered by
-      <a href="https://www.livarava.com/">LivaRava</a>
-      <a href="https://www.livarava.com/en/cloud/">Cloud</a>
-      and
-      <a href="https://www.livarava.com/en/framework/">Framework</a>
-    </small>
-  </div>
+<footer class="row p-3">
+    <div class="col-sm-4">
+        <small>
+            &copy; 2018 Kryvyy Rih IT Cluster<br/>
+            <a href="mailto:info@krit.org.ua">info@krit.org.ua</a>
+        </small>
+    </div>
+    <div class="col-sm-4">
+        <small>
+            <ul>
+                <li>
+                    {{#link-to "page" "about"}}Про нас{{/link-to}}
+                </li>
+
+                <li>
+                    {{#link-to "page" "projects"}}Проекти{{/link-to}}
+                </li>
+
+                <li>
+                    {{#link-to "page" "events"}}Події{{/link-to}}
+                </li>
+
+                <li>
+                    {{#link-to "news"}}Новини{{/link-to}}
+                </li>
+
+                <li>
+                    {{#link-to "page" "contacts"}}Контакти{{/link-to}}
+                </li>
+
+                <li>
+                    <a href="mailto:info@krit.org.ua?subject=Приєднання до Kryvyy Rih IT Cluster">Приєднатися</a>
+                </li>
+            </ul>
+        </small>
+    </div>
+    <div class="col-sm-4 text-right">
+        <small>
+            <div class="text-right mb-2">
+                Ми в соціальних мережах:
+                <a href="https://www.facebook.com/kritorgua/" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+            <div class="text-right">
+                Powered by
+                <a href="https://www.livarava.com/">LivaRava</a>
+                <a href="https://www.livarava.com/en/cloud/">Cloud</a>
+                and
+                <a href="https://www.livarava.com/en/framework/">Framework</a>
+            </div>
+        </small>
+    </div>
 </footer>

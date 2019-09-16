@@ -1,0 +1,32 @@
+.index-background {
+  background-image: url(https://lrsm1.s3.amazonaws.com/5c4d39bc-d86a-11e9-b560-5254a2021b2b.jpg);
+  background-position: center center;
+  background-size: cover;
+  min-height: 500px;
+
+  .index-title {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 300%;
+    background: rgba(50, 50, 50, 0.5);
+  }
+
+  .index-summary {
+    color: #fff;
+    font-size: 150%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.action-block {
+  background: #eee;
+  min-height: 120px;
+  line-height: 120px;
+  font-size: 100%;
+}
+
+.action-block:hover {
+  background: #ccc;
+  text-decoration: none;
+  color: #000;
+}
