@@ -1,82 +1,92 @@
 'use strict';
 
 module.exports = function (environment) {
-  let ENV = {
-    modulePrefix: 'krit',
-    environment,
-    rootURL: '/',
-    locationType: 'auto',
-    EmberENV: {
-      FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
-      },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
-    },
+    let ENV = {
+        modulePrefix: 'krit',
+        environment,
+        rootURL: '/',
+        locationType: 'auto',
+        EmberENV: {
+            FEATURES: {
+                // Here you can enable experimental features on an ember canary build
+                // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
+            },
+            EXTEND_PROTOTYPES: {
+                // Prevent Ember Data from overriding Date.parse.
+                Date: false
+            }
+        },
 
-    APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    },
+        APP: {
+            // Here you can pass flags/options to your application instance
+            // when it is created
+        },
 
-    api: {
-      host: 'https://www.livarava.com',
-      path: '/api/v2',
-      key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
-    },
+        api: {
+            host: 'https://www.livarava.com',
+            path: '/api/v2',
+            key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+        },
 
-    i18n: {
-      defaultLocale: 'uk',
-      allowedLocales: ['uk']
-    },
+        i18n: {
+            defaultLocale: 'uk',
+            allowedLocales: ['uk']
+        },
 
-    neuronet: {
-      site: 136674,
-    },
+        neuronet: {
+            site: 136674,
+        },
 
-    pageTitle: {
-      replace: true
-    },
+        pageTitle: {
+            replace: true
+        },
 
-    moment: {
-      includeLocales: true
-    },
-  };
+        moment: {
+            includeLocales: true
+        },
 
-  if (environment === 'local') {
-    ENV.api = {
-      host: 'http://local.livarava.com',
-      path: '/api/v2',
-      key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+        metricsAdapters: [
+            {
+                name: 'GoogleAnalytics',
+                environments: ['local', 'master', 'development', 'production'],
+                config: {
+                    id: 'UA-3675054-49',
+                }
+            }
+        ],
     };
-  }
 
-  if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-  }
+    if (environment === 'local') {
+        ENV.api = {
+            host: 'http://local.livarava.com',
+            path: '/api/v2',
+            key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+        };
+    }
 
-  if (environment === 'test') {
-    // Testem prefers this...
-    ENV.locationType = 'none';
+    if (environment === 'development') {
+        // ENV.APP.LOG_RESOLVER = true;
+        // ENV.APP.LOG_ACTIVE_GENERATION = true;
+        // ENV.APP.LOG_TRANSITIONS = true;
+        // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+        // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    }
 
-    // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
+    if (environment === 'test') {
+        // Testem prefers this...
+        ENV.locationType = 'none';
 
-    ENV.APP.rootElement = '#ember-testing';
-    ENV.APP.autoboot = false;
-  }
+        // keep test console output quieter
+        ENV.APP.LOG_ACTIVE_GENERATION = false;
+        ENV.APP.LOG_VIEW_LOOKUPS = false;
 
-  if (environment === 'production') {
-    // here you can enable a production-specific feature
-  }
+        ENV.APP.rootElement = '#ember-testing';
+        ENV.APP.autoboot = false;
+    }
 
-  return ENV;
+    if (environment === 'production') {
+        // here you can enable a production-specific feature
+    }
+
+    return ENV;
 };
