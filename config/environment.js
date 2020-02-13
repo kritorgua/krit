@@ -64,6 +64,14 @@ module.exports = function (environment) {
         };
     }
 
+    if (environment === 'master') {
+        ENV.api = {
+            host: 'https://www.livarava.com',
+            path: '/api/v2',
+            key: '1d789b04-24ec-4bec-b459-bf6709e91ca7',
+        };
+    }
+
     if (environment === 'development') {
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;

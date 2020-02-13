@@ -1,6 +1,12 @@
 run:
 	yarn start
 
+master:
+	ember s --environment="local"
+
+master:
+	ember s --environment="master"
+
 build:
 	ember b --environment="production"
 
