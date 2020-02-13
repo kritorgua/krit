@@ -2,6 +2,13 @@
   <div class="col-sm-8">
     <h1>{{model.item.title}}</h1>
 
+    <div class="text-muted mb-3">
+      <small>
+        {{moment-format model.item.created "YYYY-MM-DD HH:mm"}} &middot;
+        {{model.item.author.fullname}}
+      </small>
+    </div>
+
     <div>{{{model.item.description}}}</div>
   </div>
   <div class="col-sm-4">

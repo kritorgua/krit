@@ -12,11 +12,12 @@ export default Route.extend({
         const site = config.neuronet.site;
 
         return hash({
+            page: store.findRecord('page', 148840),
             news: store.query('post', {
                 'filter[site]': site,
                 'filter[featured]': true,
                 display: 'public',
-                per_page: 3,
+                per_page: 6,
                 page: 1,
                 sort: '-created'
             }),
