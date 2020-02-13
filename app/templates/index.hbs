@@ -1,44 +1,53 @@
 <div class="row mb-5">
-    <div class="col-12">
-        <div class="index-background">
-            <div class="row">
-                <div class="col-6 offset-1">
-                    <div class="index-title mt-3 p-3">
-                        РОЗВИВАЄМО ІТ-ЕКОСИСТЕМУ КРИВОГО РОГУ
-                    </div>
-                    <div class="index-summary mt-3 mb-3 p-3">
-                        Ми формуємо та розвиваємо культуру високотехнологічного підприємництва
-                    </div>
-                </div>
-            </div>
+  <div class="col-12">
+    <div class="index-background">
+      <div class="row">
+        <div class="col-12 col-md-6 offset-md-1">
+          <h2 class="index-title mt-3 mt-md-5 p-3">
+            РОЗВИВАЄМО<br/>
+            ІТ-ЕКОСИСТЕМУ<br/>
+            КРИВОГО РОГУ
+          </h2>
+          <h4 class="index-summary mt-3 mb-3 p-3">
+            Ми формуємо та розвиваємо культуру високотехнологічного підприємництва
+          </h4>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <h2 class="text-center mb-5">Як долучитися</h2>
 
 <div class="row mb-5">
-    <a href="mailto:info@krit.org.ua?subject=Приєднання до Kryvyy Rih IT Cluster"
-       class="action-block col-12 col-lg-3 text-center">
-        Приєднатися до кластеру
-    </a>
-    <a href="mailto:info@krit.org.ua?subject=Ініціація проекту із Kryvyy Rih IT Cluster"
-       class="action-block col-12 col-lg-3 text-center">
-        Ініціювати проект
-    </a>
-    <a href="mailto:info@krit.org.ua?subject=Організація події із Kryvyy Rih IT Cluster"
-       class="action-block col-12 col-lg-3 text-center">
-        Організувати подію
-    </a>
-    <a href="mailto:info@krit.org.ua?subject=Новина для Kryvyy Rih IT Cluster"
-       class="action-block col-12 col-lg-3 text-center">
-        Надіслати новину
-    </a>
+  <a href="mailto:info@krit.org.ua?subject=Приєднання до Kryvyy Rih IT Cluster"
+     class="action-block col-12 col-lg-3 text-center">
+    Приєднатися до кластеру
+  </a>
+  <a href="mailto:info@krit.org.ua?subject=Ініціація проекту із Kryvyy Rih IT Cluster"
+     class="action-block col-12 col-lg-3 text-center">
+    Ініціювати проект
+  </a>
+  <a href="mailto:info@krit.org.ua?subject=Організація події із Kryvyy Rih IT Cluster"
+     class="action-block col-12 col-lg-3 text-center">
+    Організувати подію
+  </a>
+  <a href="mailto:info@krit.org.ua?subject=Новина для Kryvyy Rih IT Cluster"
+     class="action-block col-12 col-lg-3 text-center">
+    Надіслати новину
+  </a>
 </div>
+
+<h2 class="text-center mb-3">Події</h2>
+
+<hr class="mb-4">
+
+{{post/post-list-horizontal
+    items=model.events}}
 
 <h2 class="text-center mb-3">Новини</h2>
 
 <hr class="mb-4">
 
 {{post/post-list-horizontal
-        items=model.news}}
+    items=model.news}}
